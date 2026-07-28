@@ -187,14 +187,14 @@ function Index() {
                 iOS・Android で今すぐ利用可能
               </p>
               <div className="grid grid-cols-2 gap-3">
-                <a href="#" className="flex items-center justify-center gap-2 bg-muted border border-border rounded-xl py-3">
+                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-muted border border-border rounded-xl py-3">
                   <Apple className="w-5 h-5" />
                   <div className="text-left leading-tight">
                     <div className="text-[10px] text-muted-foreground">ダウンロード</div>
                     <div className="text-sm font-bold">App Store</div>
                   </div>
                 </a>
-                <a href="#" className="flex items-center justify-center gap-2 bg-primary text-accent-foreground rounded-xl py-3">
+                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-primary text-accent-foreground rounded-xl py-3">
                   <Play className="w-5 h-5 fill-current" />
                   <div className="text-left leading-tight">
                     <div className="text-[10px] opacity-80">ダウンロード</div>
