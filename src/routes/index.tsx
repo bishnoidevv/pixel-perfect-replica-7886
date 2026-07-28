@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Star, Flame, ChevronsDown, Apple, Play, X } from "lucide-react";
 import { useState } from "react";
-import appIcon from "@/assets/app-icon.png";
-import gameThumb from "@/assets/game-thumb.jpg";
+import appIconAsset from "@/assets/app-icon.png.asset.json";
+import gameThumbAsset from "@/assets/game-thumb.png.asset.json";
+const appIcon = appIconAsset.url;
+const gameThumb = gameThumbAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,8 +30,7 @@ function Stars() {
   );
 }
 
-function BrowserBanner() {
-  const [open, setOpen] = useState(false);
+function BrowserBanner({ open, onClose }: { open: boolean; onClose: () => void }) {
   if (!open) return null;
   return (
     <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex items-center justify-center p-6">
@@ -41,7 +42,7 @@ function BrowserBanner() {
           <ChevronsDown className="w-6 h-6 chev-2 -mt-3" />
           <ChevronsDown className="w-6 h-6 chev-3 -mt-3" />
         </div>
-        <button onClick={() => setOpen(false)} className="w-full bg-[oklch(0.55_0.22_25)] hover:brightness-110 transition text-white font-semibold py-4 rounded-xl">
+        <button onClick={onClose} className="w-full bg-[oklch(0.55_0.22_25)] hover:brightness-110 transition text-white font-semibold py-4 rounded-xl">
           今すぐ開く
         </button>
       </div>
@@ -50,11 +51,12 @@ function BrowserBanner() {
 }
 
 function Index() {
+  const [showBanner, setShowBanner] = useState(true);
   const [hint, setHint] = useState(true);
 
   return (
     <>
-      <BrowserBanner />
+      <BrowserBanner open={showBanner} onClose={() => setShowBanner(false)} />
       <main className="min-h-screen w-full flex flex-col items-center pb-40">
         {/* Top ticker */}
         <div className="w-full text-center py-3 text-xs text-muted-foreground">
