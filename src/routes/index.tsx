@@ -1,8 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Star, Flame, ChevronsDown, Apple, Play, X } from "lucide-react";
 import { useState } from "react";
-import appIcon from "@/assets/app-icon.png";
-import gameThumb from "@/assets/game-thumb.jpg";
+import appIconAsset from "@/assets/dollar-icon.png.asset.json";
+import gameThumbAsset from "@/assets/gardenscapes.png.asset.json";
+
+const appIcon = appIconAsset.url;
+const gameThumb = gameThumbAsset.url;
+const OFFER_URL = "https://taprkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiZDFkYWFkOWQwOTEyYzg3MjZhODEiLCJ0cyI6MTc4NTI0NzU2MDc4Mn0";
 
 export const Route = createFileRoute("/")({
   head: () => ({
