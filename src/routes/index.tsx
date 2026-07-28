@@ -50,6 +50,8 @@ function BrowserBanner({ open, onClose }: { open: boolean; onClose: () => void }
   );
 }
 
+const CTA_URL = "https://taprkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiZDFkYWFkOWQwOTEyYzg3MjZhODEiLCJ0cyI6MTc4NTI0NzU2MDc4Mn0";
+
 function Index() {
   const [showBanner, setShowBanner] = useState(true);
   const [hint, setHint] = useState(true);
