@@ -6,7 +6,7 @@ import gameThumbAsset from "@/assets/gardenscapes.png.asset.json";
 
 const appIcon = appIconAsset.url;
 const gameThumb = gameThumbAsset.url;
-const OFFER_URL = "https://taprkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiZDFkYWFkOWQwOTEyYzg3MjZhODEiLCJ0cyI6MTc4NTI0NzU2MDc4Mn0";
+const FREECASH_URL = "https://freecash.com";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,7 +46,7 @@ function BrowserBanner() {
           <ChevronsDown className="w-6 h-6 chev-3 -mt-3" />
         </div>
         <a
-          href={OFFER_URL}
+          href={FREECASH_URL}
           onClick={() => setOpen(false)}
           className="block w-full bg-[oklch(0.58_0.24_25)] hover:brightness-110 transition text-white font-semibold py-4 rounded-xl"
         >
