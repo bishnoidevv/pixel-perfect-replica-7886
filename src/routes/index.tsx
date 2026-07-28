@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       { title: "遊ぶだけで現金を獲得 | Freecash" },
       { name: "description", content: "ゲームをプレイし、ミッションをこなし、アプリを試すだけで本物の現金を獲得。いつでも出金OK — 最低出金額なし。" },
       { property: "og:title", content: "遊ぶだけで現金を獲得 | Freecash" },
-      { property: "og:description", content: "ゲームをプレイして本物の現金を獲得。PayPal・Visa・仮想通貨で出金可能。" },
+      { property: "og:description", content: "ゲームをプレイし、ミッションをこなし、アプリを試すだけで本物の現金を獲得。いつでも出金OK — 最低出金額なし。" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
