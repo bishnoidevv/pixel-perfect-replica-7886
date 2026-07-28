@@ -1,12 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Star, Flame, ChevronsDown, Apple, Play, X } from "lucide-react";
 import { useState } from "react";
-import appIconAsset from "@/assets/dollar-icon.png.asset.json";
-import gameThumbAsset from "@/assets/gardenscapes.png.asset.json";
-
-const appIcon = appIconAsset.url;
-const gameThumb = gameThumbAsset.url;
-const FREECASH_URL = "https://freecash.com";
+import appIcon from "@/assets/app-icon.png";
+import gameThumb from "@/assets/game-thumb.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,25 +29,21 @@ function Stars() {
 }
 
 function BrowserBanner() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 bg-black flex items-center justify-center p-6">
+    <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex items-center justify-center p-6">
       <div className="max-w-sm w-full text-center space-y-6">
-        <h2 className="text-4xl font-black leading-tight text-white">ブラウザで開いてください</h2>
-        <p className="text-white/70 text-sm">続行するには、このページを<br />ブラウザで開いてください。</p>
-        <div className="flex flex-col items-center gap-1 py-4 text-[oklch(0.7_0.15_240)]">
+        <h2 className="text-4xl font-black leading-tight">ブラウザで開いてください</h2>
+        <p className="text-muted-foreground text-sm">続行するには、このページを<br />ブラウザで開いてください。</p>
+        <div className="flex flex-col items-center gap-1 py-4 text-primary">
           <ChevronsDown className="w-6 h-6 chev-1" />
           <ChevronsDown className="w-6 h-6 chev-2 -mt-3" />
           <ChevronsDown className="w-6 h-6 chev-3 -mt-3" />
         </div>
-        <a
-          href={FREECASH_URL}
-          onClick={() => setOpen(false)}
-          className="block w-full bg-[oklch(0.58_0.24_25)] hover:brightness-110 transition text-white font-semibold py-4 rounded-xl"
-        >
+        <button onClick={() => setOpen(false)} className="w-full bg-[oklch(0.55_0.22_25)] hover:brightness-110 transition text-white font-semibold py-4 rounded-xl">
           今すぐ開く
-        </a>
+        </button>
       </div>
     </div>
   );
