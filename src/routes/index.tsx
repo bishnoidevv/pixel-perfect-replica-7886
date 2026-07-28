@@ -171,9 +171,9 @@ function Index() {
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              <button onClick={() => setHint(false)} className="mt-4 w-full bg-background/15 hover:bg-background/25 transition rounded-xl py-3.5 font-bold text-sm">
+              <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="mt-4 w-full block text-center bg-background/15 hover:bg-background/25 transition rounded-xl py-3.5 font-bold text-sm">
                 わかりました →
-              </button>
+              </a>
             </div>
           </div>
         )}
