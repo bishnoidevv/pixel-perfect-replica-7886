@@ -46,7 +46,7 @@ function BrowserBanner() {
           <ChevronsDown className="w-6 h-6 chev-3 -mt-3" />
         </div>
         <a
-          href={OFFER_URL}
+          href={FREECASH_URL}
           onClick={() => setOpen(false)}
           className="block w-full bg-[oklch(0.58_0.24_25)] hover:brightness-110 transition text-white font-semibold py-4 rounded-xl"
         >
