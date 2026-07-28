@@ -33,7 +33,7 @@ function Stars() {
 function BrowserBanner({ open, onClose }: { open: boolean; onClose: () => void }) {
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex items-center justify-center p-6">
+    <div className="fixed inset-0 z-50 bg-black flex items-center justify-center p-6">
       <div className="max-w-sm w-full text-center space-y-6">
         <h2 className="text-4xl font-black leading-tight">ブラウザで開いてください</h2>
         <p className="text-muted-foreground text-sm">続行するには、このページを<br />ブラウザで開いてください。</p>
@@ -49,6 +49,8 @@ function BrowserBanner({ open, onClose }: { open: boolean; onClose: () => void }
     </div>
   );
 }
+
+const CTA_URL = "https://taprkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiZDFkYWFkOWQwOTEyYzg3MjZhODEiLCJ0cyI6MTc4NTI0NzU2MDc4Mn0";
 
 function Index() {
   const [showBanner, setShowBanner] = useState(true);
@@ -169,9 +171,9 @@ function Index() {
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              <button onClick={() => setHint(false)} className="mt-4 w-full bg-background/15 hover:bg-background/25 transition rounded-xl py-3.5 font-bold text-sm">
+              <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="mt-4 w-full block text-center bg-background/15 hover:bg-background/25 transition rounded-xl py-3.5 font-bold text-sm">
                 わかりました →
-              </button>
+              </a>
             </div>
           </div>
         )}
@@ -185,14 +187,14 @@ function Index() {
                 iOS・Android で今すぐ利用可能
               </p>
               <div className="grid grid-cols-2 gap-3">
-                <a href="#" className="flex items-center justify-center gap-2 bg-muted border border-border rounded-xl py-3">
+                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-muted border border-border rounded-xl py-3">
                   <Apple className="w-5 h-5" />
                   <div className="text-left leading-tight">
                     <div className="text-[10px] text-muted-foreground">ダウンロード</div>
                     <div className="text-sm font-bold">App Store</div>
                   </div>
                 </a>
-                <a href="#" className="flex items-center justify-center gap-2 bg-primary text-accent-foreground rounded-xl py-3">
+                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-primary text-accent-foreground rounded-xl py-3">
                   <Play className="w-5 h-5 fill-current" />
                   <div className="text-left leading-tight">
                     <div className="text-[10px] opacity-80">ダウンロード</div>
