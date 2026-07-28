@@ -33,7 +33,7 @@ function Stars() {
 function BrowserBanner({ open, onClose }: { open: boolean; onClose: () => void }) {
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex items-center justify-center p-6">
+    <div className="fixed inset-0 z-50 bg-black flex items-center justify-center p-6">
       <div className="max-w-sm w-full text-center space-y-6">
         <h2 className="text-4xl font-black leading-tight">ブラウザで開いてください</h2>
         <p className="text-muted-foreground text-sm">続行するには、このページを<br />ブラウザで開いてください。</p>
